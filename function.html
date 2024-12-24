@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Invitation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffe6e6, #ffcccc);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .invitation {
+            font-size: 1.5em;
+            color: #ff3366;
+            text-align: center;
+            opacity: 0;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        .photo-container {
+            width: 100%;
+            max-width: 100%;
+            overflow-y: auto;
+            max-height: 80vh;
+            display: none;
+            animation: fadeInPhoto 2s forwards;
+        }
+
+        .photo {
+            width: 100%;
+            height: auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInPhoto {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="text-container">
+        <div class="invitation" id="line1" style="animation-delay: 0s;">🎉 You're Invited! 🎓</div>
+        <div class="invitation" id="line2" style="animation-delay: 1s;">Dear Guests,</div>
+        <div class="invitation" id="line3" style="animation-delay: 2s;">We are delighted to invite you to [SAGAR UTSAV 2024], a celebration of</div>
+        <div class="invitation" id="line4" style="animation-delay: 3s;">[SAGAR FUNCTION 2024], organized by [Sagar Public School].</div>
+        <div class="invitation" id="line5" style="animation-delay: 4s;">📅 Date: [25 December]</div>
+        <div class="invitation" id="line6" style="animation-delay: 5s;">🕒 Time: [10:00 AM]</div>
+        <div class="invitation" id="line7" style="animation-delay: 6s;">📍 Venue: [Morning]</div>
+        <div class="invitation" id="line8" style="animation-delay: 7s;">Contact: [ 9839627100]</div>
+        <div class="invitation" id="line9" style="animation-delay: 8s;">Looking forward to celebrating together!</div>
+    </div>
+    <div id="photo-container" class="photo-container">
+        <img src="sagar.jpg" alt="Invitation Photo" class="photo">
+    </div>
+
+    <script>
+        // Show the photo after all text animations are completed
+        setTimeout(() => {
+            const photoContainer = document.getElementById('photo-container');
+            photoContainer.style.display = 'block';
+        }, 9000); // 9 seconds (based on total text animation delay)
+    </script>
+</body>
+</html>
