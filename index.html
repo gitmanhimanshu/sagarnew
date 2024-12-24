@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagar Utsav 2024</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffe6e6, #ffcccc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .poster {
+            width: 70%;
+            max-width: 900px;
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            animation: enlarge 1.5s ease-in-out infinite alternate;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ff3366;
+            margin-top: 20px;
+            animation: textAppear 3s ease;
+        }
+
+        .contact-btn, .redirect-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #ff3366;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-right: 10px;
+        }
+
+        .contact-btn:hover, .redirect-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes enlarge {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        @keyframes textAppear {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="invite.webp" alt="Sagar Utsav 2024" class="poster">
+        <h1>Welcome to Sagar Utsav 2024</h1>
+        <button class="contact-btn" onclick="showContact()">Contact Us</button>
+        <button class="redirect-btn" onclick="redirectToFunction()">Go to Invitation Page</button>
+    </div>
+
+    <script>
+        function showContact() {
+           window.location.href = "contact.html";
+        }
+
+        function redirectToFunction() {
+            window.location.href = "function.html";
+        }
+    </script>
+</body>
+</html>
